@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		127201BC25C305A100B54615 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 127201BB25C305A100B54615 /* Zip */; };
 		12D60FEC25C1878500A11611 /* SPMLibraries.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D60FEA25C1878500A11611 /* SPMLibraries.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12D60FEF25C1878500A11611 /* SPMLibraries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D60FE825C1878400A11611 /* SPMLibraries.framework */; };
 		12D60FF025C1878500A11611 /* SPMLibraries.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12D60FE825C1878400A11611 /* SPMLibraries.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		12D60FF925C1878D00A11611 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 12D60FF825C1878D00A11611 /* Cuckoo */; };
-		12D60FFB25C1879100A11611 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 12D60FFA25C1879100A11611 /* Zip */; };
 		12D6100825C1880400A11611 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 12D6100725C1880400A11611 /* Cuckoo */; };
-		12D6100A25C1880400A11611 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 12D6100925C1880400A11611 /* Zip */; };
 		98C441B8DCC375B975F387B8 /* LogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C446ACEEDEEDE9E3462BC5 /* LogsTableViewController.swift */; };
 		98C446E935CBEF5765F7007D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C44C21EF09382A628C868A /* TableViewCell.swift */; };
 		98C447E6D0BD8EDF28AAE684 /* AppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C44FECC530031877EC625A /* AppsTableViewController.swift */; };
@@ -146,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D60FFB25C1879100A11611 /* Zip in Frameworks */,
 				12D60FF925C1878D00A11611 /* Cuckoo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D6100A25C1880400A11611 /* Zip in Frameworks */,
+				127201BC25C305A100B54615 /* Zip in Frameworks */,
 				12D6100825C1880400A11611 /* Cuckoo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,7 +534,6 @@
 			name = SPMLibraries;
 			packageProductDependencies = (
 				12D60FF825C1878D00A11611 /* Cuckoo */,
-				12D60FFA25C1879100A11611 /* Zip */,
 			);
 			productName = SPMLibraries;
 			productReference = 12D60FE825C1878400A11611 /* SPMLibraries.framework */;
@@ -578,7 +575,7 @@
 			name = QLog;
 			packageProductDependencies = (
 				12D6100725C1880400A11611 /* Cuckoo */,
-				12D6100925C1880400A11611 /* Zip */,
+				127201BB25C305A100B54615 /* Zip */,
 			);
 			productName = QLog;
 			productReference = 9FE859FB1EFAA73600560920 /* QLog.framework */;
@@ -620,7 +617,7 @@
 			mainGroup = 9FE859F11EFAA73600560920;
 			packageReferences = (
 				12D60FC025C183DC00A11611 /* XCRemoteSwiftPackageReference "Cuckoo" */,
-				12D60FC925C1841700A11611 /* XCRemoteSwiftPackageReference "Zip" */,
+				127201BA25C305A100B54615 /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = 9FE859FC1EFAA73600560920 /* Products */;
 			projectDirPath = "";
@@ -1082,6 +1079,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		127201BA25C305A100B54615 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kmatskevich/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
 		12D60FC025C183DC00A11611 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Brightify/Cuckoo";
@@ -1090,36 +1095,23 @@
 				minimumVersion = 1.4.1;
 			};
 		};
-		12D60FC925C1841700A11611 /* XCRemoteSwiftPackageReference "Zip" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/marmelroy/Zip";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		127201BB25C305A100B54615 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 127201BA25C305A100B54615 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
 		12D60FF825C1878D00A11611 /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 12D60FC025C183DC00A11611 /* XCRemoteSwiftPackageReference "Cuckoo" */;
 			productName = Cuckoo;
 		};
-		12D60FFA25C1879100A11611 /* Zip */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 12D60FC925C1841700A11611 /* XCRemoteSwiftPackageReference "Zip" */;
-			productName = Zip;
-		};
 		12D6100725C1880400A11611 /* Cuckoo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 12D60FC025C183DC00A11611 /* XCRemoteSwiftPackageReference "Cuckoo" */;
 			productName = Cuckoo;
-		};
-		12D6100925C1880400A11611 /* Zip */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 12D60FC925C1841700A11611 /* XCRemoteSwiftPackageReference "Zip" */;
-			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

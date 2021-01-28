@@ -1,2 +1,2 @@
 github "Brightify/Cuckoo"
-github "marmelroy/Zip" ~> 2.1
+github "kmatskevich/Zip"

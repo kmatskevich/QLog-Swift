@@ -16,6 +16,8 @@ let package = Package(
     targets: [
         .target(
             name: "QLog",
-            dependencies: ["Cuckoo", "Zip"]),
+            dependencies: ["Cuckoo", "Zip"],
+            path: "QLog/QLog"),
+
     ]
 )

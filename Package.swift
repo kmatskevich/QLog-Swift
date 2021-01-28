@@ -7,6 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "QLog",
+            type: .dynamic,
             targets: ["QLog"]),
     ],
     dependencies: [

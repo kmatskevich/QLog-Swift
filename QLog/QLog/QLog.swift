@@ -7,7 +7,7 @@
 //
 
 import MobileCoreServices
-import Zip
+import ZIPFoundation
 
 // MARK: - Static error functions
 
@@ -76,9 +76,15 @@ public class QLog {
         let zipDirectoryUrl = URL(fileURLWithPath: NSTemporaryDirectory())
         let zipFileUrl = zipDirectoryUrl.appendingPathComponent("Support Package \(QLog.targetName) \(QLog.dateFormatter.string(from: Date())).zip")
         let logPathUrl = UiLogger.shared.logUrl
-        guard (try? Zip.zipFiles(paths: [logPathUrl], zipFilePath: zipFileUrl, password: nil, progress: { _ in })) != nil else {
-            return
+        let fileManager = FileManager()
+        do {
+            try fileManager.zipItem(at: logPathUrl, to: zipFileUrl)
+        } catch {
+            print("Creation of ZIP archive failed with error:\(error)")
         }
+//        guard (try? Zip.zipFiles(paths: [logPathUrl], zipFilePath: zipFileUrl, password: nil, progress: { _ in })) != nil else {
+//            return
+//        }
         // Share zip file
         documentInteractionController = UIDocumentInteractionController()
         documentInteractionController.url = zipFileUrl

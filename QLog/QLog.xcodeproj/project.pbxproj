@@ -996,7 +996,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/usr/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/usr/lib/**",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks/**",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,
@@ -1030,7 +1033,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/usr/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/usr/lib/**",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks/**",
+				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					XCTest,

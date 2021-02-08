@@ -999,7 +999,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/usr/lib";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
-					XCTEST,
+					XCTest,
 					"-weak-lXCTestSwiftSupport",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = qa.quantum.QLog;
@@ -1033,7 +1033,7 @@
 				LIBRARY_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/usr/lib";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
-					XCTEST,
+					XCTest,
 					"-weak-lXCTestSwiftSupport",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = qa.quantum.QLog;

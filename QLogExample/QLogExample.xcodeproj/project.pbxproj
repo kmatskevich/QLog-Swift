@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,25 +13,10 @@
 		9F56D22920434D580051A25F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56D22820434D580051A25F /* Strings.swift */; };
 		9F6AAAA32017E20100DB49A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AAAA22017E20100DB49A0 /* AppDelegate.swift */; };
 		9F6AAAA52017E20100DB49A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AAAA42017E20100DB49A0 /* ViewController.swift */; };
-		9FD900D722DCFE0500FEABFB /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD900CC22DCFDDA00FEABFB /* Zip.framework */; };
-		9FD900D822DCFE0500FEABFB /* Zip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD900CC22DCFDDA00FEABFB /* Zip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9FD900D622DCFDFE00FEABFB /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9FD900D822DCFE0500FEABFB /* Zip.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		12E581ED25D19CD70097D991 /* QLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2087BD21F284C000427BE3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9F4E7F042050853A00892524 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9F56D22520434D3C0051A25F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -49,7 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FD900D722DCFE0500FEABFB /* Zip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +90,7 @@
 		9FD900CA22DCFDBF00FEABFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12E581ED25D19CD70097D991 /* QLog.framework */,
 				9FD900CC22DCFDDA00FEABFB /* Zip.framework */,
 			);
 			name = Frameworks;
@@ -130,13 +115,14 @@
 				9F6AAA9B2017E20100DB49A0 /* Sources */,
 				9F6AAA9C2017E20100DB49A0 /* Frameworks */,
 				9F6AAA9D2017E20100DB49A0 /* Resources */,
-				9FD900D622DCFDFE00FEABFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = QLogExample;
+			packageProductDependencies = (
+			);
 			productName = QLogExample;
 			productReference = 9F6AAA9F2017E20100DB49A0 /* QLogExample.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +154,9 @@
 				de,
 			);
 			mainGroup = 9F6AAA962017E20100DB49A0;
+			packageReferences = (
+				12E581E525D19C520097D991 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			productRefGroup = 9F6AAAA02017E20100DB49A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,7 +340,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -362,9 +352,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6V7AJ8594T;
 				INFOPLIST_FILE = QLogExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = qa.quantum.QLogExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -375,9 +368,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6V7AJ8594T;
 				INFOPLIST_FILE = QLogExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = qa.quantum.QLogExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,6 +402,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12E581E525D19C520097D991 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 9F6AAA972017E20100DB49A0 /* Project object */;
 }

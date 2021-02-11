@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1212190125D57B2C00B99D06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121218FF25D57B2C00B99D06 /* XCTest.framework */; platformFilter = ios; };
-		1212190225D57B2C00B99D06 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 121218FF25D57B2C00B99D06 /* XCTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1212190225D57B2C00B99D06 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 121218FF25D57B2C00B99D06 /* XCTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1212190325D57B2C00B99D06 /* XCTAutomationSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1212190025D57B2C00B99D06 /* XCTAutomationSupport.framework */; platformFilter = ios; };
-		1212190425D57B2C00B99D06 /* XCTAutomationSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1212190025D57B2C00B99D06 /* XCTAutomationSupport.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1212190425D57B2C00B99D06 /* XCTAutomationSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1212190025D57B2C00B99D06 /* XCTAutomationSupport.framework */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1272027825C31FB600B54615 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1272027725C31FB600B54615 /* ZIPFoundation */; };
 		12D60FEC25C1878500A11611 /* SPMLibraries.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D60FEA25C1878500A11611 /* SPMLibraries.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12D60FEF25C1878500A11611 /* SPMLibraries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D60FE825C1878400A11611 /* SPMLibraries.framework */; };

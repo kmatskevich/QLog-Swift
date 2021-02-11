@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1272027825C31FB600B54615 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1272027725C31FB600B54615 /* ZIPFoundation */; };
-		12D6100825C1880400A11611 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 12D6100725C1880400A11611 /* Cuckoo */; };
 		98C441B8DCC375B975F387B8 /* LogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C446ACEEDEEDE9E3462BC5 /* LogsTableViewController.swift */; };
 		98C446E935CBEF5765F7007D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C44C21EF09382A628C868A /* TableViewCell.swift */; };
 		98C447E6D0BD8EDF28AAE684 /* AppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C44FECC530031877EC625A /* AppsTableViewController.swift */; };
@@ -82,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D6100825C1880400A11611 /* Cuckoo in Frameworks */,
 				1272027825C31FB600B54615 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +294,6 @@
 			);
 			name = QLog;
 			packageProductDependencies = (
-				12D6100725C1880400A11611 /* Cuckoo */,
 				1272027725C31FB600B54615 /* ZIPFoundation */,
 			);
 			productName = QLog;
@@ -330,7 +327,6 @@
 			);
 			mainGroup = 9FE859F11EFAA73600560920;
 			packageReferences = (
-				12D60FC025C183DC00A11611 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 				1272027625C31FB600B54615 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			productRefGroup = 9FE859FC1EFAA73600560920 /* Products */;
@@ -543,11 +539,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)/**",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks/**",
-				);
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)/**";
 				INFOPLIST_FILE = QLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -555,16 +548,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					/Applications/Xcode.app/Contents/Developer/Library/Frameworks/,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/usr/lib/**",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks/**",
 				);
-				OTHER_LDFLAGS = (
-					"-weak-lswiftXCTest",
-					"-weak_framework",
-					"XCTest\n",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = qa.quantum.QLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -582,11 +572,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)/**",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks/**",
-				);
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_FRAMEWORKS_DIR)/**";
 				INFOPLIST_FILE = QLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -594,16 +581,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					/Applications/Xcode.app/Contents/Developer/Library/Frameworks/,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/usr/lib/**",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks/**",
 				);
-				OTHER_LDFLAGS = (
-					"-weak-lswiftXCTest",
-					"-weak_framework",
-					"XCTest\n",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = qa.quantum.QLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -643,14 +627,6 @@
 				minimumVersion = 0.9.11;
 			};
 		};
-		12D60FC025C183DC00A11611 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Brightify/Cuckoo";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -658,11 +634,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1272027625C31FB600B54615 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
 			productName = ZIPFoundation;
-		};
-		12D6100725C1880400A11611 /* Cuckoo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 12D60FC025C183DC00A11611 /* XCRemoteSwiftPackageReference "Cuckoo" */;
-			productName = Cuckoo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

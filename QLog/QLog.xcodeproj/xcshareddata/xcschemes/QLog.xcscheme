@@ -38,16 +38,6 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FE85A031EFAA73700560920"
-               BuildableName = "QLogTests.xctest"
-               BlueprintName = "QLogTests"
-               ReferencedContainer = "container:QLog.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

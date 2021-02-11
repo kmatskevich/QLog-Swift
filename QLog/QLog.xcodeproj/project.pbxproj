@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121218EE25D5750200B99D06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121218EC25D5750200B99D06 /* XCTest.framework */; platformFilter = ios; };
+		121218EF25D5750200B99D06 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 121218EC25D5750200B99D06 /* XCTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		121218F025D5750200B99D06 /* XCTAutomationSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121218ED25D5750200B99D06 /* XCTAutomationSupport.framework */; platformFilter = ios; };
+		121218F125D5750200B99D06 /* XCTAutomationSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 121218ED25D5750200B99D06 /* XCTAutomationSupport.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1272027825C31FB600B54615 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1272027725C31FB600B54615 /* ZIPFoundation */; };
 		12D60FEC25C1878500A11611 /* SPMLibraries.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D60FEA25C1878500A11611 /* SPMLibraries.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12D60FEF25C1878500A11611 /* SPMLibraries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D60FE825C1878400A11611 /* SPMLibraries.framework */; };
@@ -59,6 +63,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		121218F225D5750200B99D06 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				121218EF25D5750200B99D06 /* XCTest.framework in Embed Frameworks */,
+				121218F125D5750200B99D06 /* XCTAutomationSupport.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		12D60FF425C1878500A11611 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +89,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		121218EC25D5750200B99D06 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Frameworks/iphonesimulator/XCTest.framework; sourceTree = "<group>"; };
+		121218ED25D5750200B99D06 /* XCTAutomationSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTAutomationSupport.framework; path = Frameworks/iphonesimulator/XCTAutomationSupport.framework; sourceTree = "<group>"; };
 		12D60FDE25C186FC00A11611 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		12D60FE825C1878400A11611 /* SPMLibraries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPMLibraries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D60FEA25C1878500A11611 /* SPMLibraries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMLibraries.h; sourceTree = "<group>"; };
@@ -162,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				12D6100825C1880400A11611 /* Cuckoo in Frameworks */,
+				121218EE25D5750200B99D06 /* XCTest.framework in Frameworks */,
 				1272027825C31FB600B54615 /* ZIPFoundation in Frameworks */,
+				121218F025D5750200B99D06 /* XCTAutomationSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +339,8 @@
 		9F6B95FE228F4E90006433F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				121218ED25D5750200B99D06 /* XCTAutomationSupport.framework */,
+				121218EC25D5750200B99D06 /* XCTest.framework */,
 				12D60FDE25C186FC00A11611 /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -567,6 +589,8 @@
 				9FE859F71EFAA73600560920 /* Frameworks */,
 				9FE859F81EFAA73600560920 /* Headers */,
 				9FE859F91EFAA73600560920 /* Resources */,
+				121218E325D5740000B99D06 /* ShellScript */,
+				121218F225D5750200B99D06 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -660,6 +684,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		121218E325D5740000B99D06 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir Frameworks && mkdir Frameworks/iphonesimulator\nPLATFORMS=/Applications/Xcode.app/Contents/Developer/Platforms\nFRAMEWORKS=Developer/Library/Frameworks\ncp -Rp \\\n    \"$PLATFORMS/iPhoneSimulator.platform/$FRAMEWORKS/XCTest.framework\" \\\n    Frameworks/iphonesimulator\n";
+		};
 		9F0325AF1F731560008F2BEE /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -987,7 +1028,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/iphonesimulator";
 				INFOPLIST_FILE = QLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1024,7 +1065,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/iphonesimulator";
 				INFOPLIST_FILE = QLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
